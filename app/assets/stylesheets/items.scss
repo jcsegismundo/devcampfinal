@@ -1,3 +1,21 @@
 // Place all the styles related to the Items controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.block {
+   word-wrap: break-word;
+   width: 500px;
+   text-align: justify;
+   margin-bottom:10pt;
+}
+
+#border {
+	padding: 5pt;
+	border-style:solid;
+	border-width:3px;
+	border-padding:2px;
+}
+
+.button {
+	text-decoration: none;
+}

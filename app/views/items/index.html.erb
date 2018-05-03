@@ -13,16 +13,14 @@
 				<th>Quantity</th>
 				<th></th>
 				<th></th>
-				<th></th>
 			</tr>
 		</thead>
 		<tbody>
 			<% @items.each do |i| %>
 			<tr>
-				<td><%= i.name %></td>
-				<td><%= i.price %></td>
+				<td><%= link_to i.name, i %></td>
+				<td>Php <%= print_money(i) %></td>
 				<td><%= i.quantity %></td>
-				<td><%= link_to 'See More', i %></td>
 				<td><%= link_to 'Edit', edit_item_path(i) %></td>
 				<td><%= link_to 'Delete', i, method: :delete, data: { confirm: 'Are you sure?' } %></td>
 			</tr>

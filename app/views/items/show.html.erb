@@ -2,25 +2,15 @@
 
 <div>
 	<h2><%= @item.name %></h2>
-	<table border="1">
-		<thead>
-			<tr>
-				<th> Price </th>
-				<th> Description </th>
-				<th> Quantity </th>
-				<th></th>
-				<th></th>
-			</tr>
-		</thead>
-		<tbody>
-			<tr>
-				<td> Php <%= @item.price %> </td>
-				<td> <%= @item.description %> </td>
-				<td> <%= @item.quantity %> </td>
-				<td> <%= link_to 'Edit', edit_item_path(@item) %> </td>
-				<td> <%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %> </td>
-			</tr>
-		</tbody>
-	</table>
+	<h3>Php <%= print_money(@item) %> </h3>
+	<div class="block" id="border" >
+		 <%= @item.description %>
+	</div>
+	<div class="block">
+		Quantity in Stock: <%= @item.quantity %>
+	</div>
+
+	<button class="button"> <%= link_to 'Edit', edit_item_path(@item) %> </button> 
+	<button class="button"> <%= link_to 'Delete', @item, method: :delete, data: { confirm: 'Are you sure?' } %> </button> 
 </div>
 
